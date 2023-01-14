@@ -1,2 +1,23 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿Console.Clear();
+int numberA = ReadInt("Введите число: ");
+int numberB = ReadInt("Введите степень: ");
+ToDegree(numberA, numberB);
+
+
+// Функция возведения в степень
+void ToDegree(int a, int b)
+{
+    int result = 1;
+    for (int i = 1; i <= b; i++)
+    {
+        result = result * a;
+    }
+    Console.WriteLine(a + " в степени " + b + " = " + result);
+}
+
+// Функция ввода
+int ReadInt(string message)
+{
+    Console.WriteLine(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
